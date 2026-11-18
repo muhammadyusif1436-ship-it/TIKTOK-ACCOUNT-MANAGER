@@ -1,18 +1,5 @@
-
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
-
-android {
-    namespace 'com.abuhub.tiktokmanager'
-    compileSdk 35
-
-    defaultConfig {
-        applicationId 'com.abuhub.tiktokmanager'
-        minSdk 23
-        targetSdk 35
-        versionCode 1
-        versionName '1.0'
-    }
-}
+- name: Build APK
+  run: |
+    gradle wrapper
+    chmod +x ./gradlew
+    ./gradlew assembleDebug
