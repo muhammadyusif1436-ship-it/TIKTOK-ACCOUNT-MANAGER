@@ -30,6 +30,10 @@ jobs:
 
     - name: Build APK
       run: |
+        if [ ! -f settings.gradle ] && [ ! -f settings.gradle.kts ]; then
+          echo "rootProject.name = 'MyApp'" > settings.gradle
+        fi
+        gradle wrapper
         chmod +x ./gradlew
         ./gradlew assembleDebug
 
