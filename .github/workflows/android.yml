@@ -1,4 +1,4 @@
 - name: Set up Android SDK
   uses: android-actions/setup-android@v4
   with:
-    packages: 'platform-tools' # Or packages: '' if you don't need any specific SDK tools pre-installed
+    packages: 'platform-tools'
